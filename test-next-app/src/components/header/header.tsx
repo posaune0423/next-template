@@ -6,11 +6,15 @@ import Brightness4Icon from '@mui/icons-material/Brightness4'
 import Brightness7Icon from '@mui/icons-material/Brightness7'
 import IconButton from '@mui/material/IconButton'
 import MenuIcon from '@mui/icons-material/Menu'
-import { FunctionComponent } from 'react'
 import { useDarkTheme } from 'theme'
+import { FunctionComponent } from 'react'
 
-export const Header: FunctionComponent = () => {
-  const { darkMode, handleDarkModeOff, handleDarkModeOn } = useDarkTheme()
+type Props = {
+  handler: () => void;
+}
+
+export const Header: FunctionComponent<Props> = (props) => {
+  const { darkMode } = useDarkTheme()
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
@@ -28,11 +32,11 @@ export const Header: FunctionComponent = () => {
             Test Next App
           </Typography>
           {darkMode ? (
-            <IconButton color="inherit" onClick={handleDarkModeOff}>
+            <IconButton color="inherit" onClick={props.handler}>
               <Brightness7Icon />
             </IconButton>
           ) : (
-            <IconButton color="inherit" onClick={handleDarkModeOn}>
+            <IconButton color="inherit" onClick={props.handler}>
               <Brightness4Icon />
             </IconButton>
           )}

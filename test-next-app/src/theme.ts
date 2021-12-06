@@ -19,13 +19,19 @@ export const useDarkTheme = () => {
   const handleDarkModeOn = () => {
     localStorage.setItem('darkMode', 'on')
     setDarkMode(true)
-    console.log(theme)
   }
 
   const handleDarkModeOff = () => {
     localStorage.setItem('darkMode', 'off')
     setDarkMode(false)
-    console.log(theme)
+  }
+
+  const toggleDarkMode = () => {
+    if (darkMode) {
+      handleDarkModeOff()
+    } else {
+      handleDarkModeOn()
+    }
   }
 
   useEffect(() => {
@@ -43,5 +49,6 @@ export const useDarkTheme = () => {
     theme,
     handleDarkModeOff,
     handleDarkModeOn,
+    toggleDarkMode,
   }
 }
