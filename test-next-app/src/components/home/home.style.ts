@@ -63,16 +63,16 @@ export const useStyles = makeStyles((theme: Theme) => ({
     '& h2': { margin: '0 0 1rem 0', fontSize: '1.5rem' },
     '& p': { margin: '0', fontSize: '1.25rem', lineHeight: 1.5 },
     '&:hover': {
-      color: '#0070f3',
-      borderColor: '#0070f3',
+      color: theme.palette.mode === 'dark' ? '#fa7a18' : '#0070f3',
+      borderColor: theme.palette.mode === 'dark' ? '#fa7a18' : '#0070f3',
     },
     '&:focus': {
-      color: '#0070f3',
-      borderColor: '#0070f3',
+      color: theme.palette.mode === 'dark' ? '#fa7a18' : '#0070f3',
+      borderColor: theme.palette.mode === 'dark' ? '#fa7a18' : '#0070f3',
     },
     '&:active': {
-      color: '#0070f3',
-      borderColor: '#0070f3',
+      color: theme.palette.mode === 'dark' ? '#fa7a18' : '#0070f3',
+      borderColor: theme.palette.mode === 'dark' ? '#fa7a18' : '#0070f3',
     },
   },
   logo: { height: '1em', marginLeft: '0.5rem' },
