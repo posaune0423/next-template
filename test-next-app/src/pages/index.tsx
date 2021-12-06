@@ -1,5 +1,4 @@
 import { NextPage } from 'next'
-
 import { Home } from '../components/home'
 import { Layout } from '../layouts'
 

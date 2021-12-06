@@ -1,5 +1,4 @@
 import { FunctionComponent } from 'react'
-
 import { Footer } from '../components/footer'
 import { Header } from '../components/header'
 
@@ -12,7 +11,7 @@ export const Layout: FunctionComponent<Props> = ({ children, component }) => {
     <>
       {component}
       <Header />
-      {children}
+      <main>{children}</main>
       <Footer />
     </>
   )

@@ -1,14 +1,47 @@
 import { createTheme } from '@mui/material'
+import { useEffect, useState } from 'react'
 
-const theme = createTheme({
-  body: {
-    padding: '0',
-    margin: '0',
-    fontFamily:
-      '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,\n    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif',
-  },
-  a: { color: 'inherit', textDecoration: 'none' },
-  '*': { boxSizing: 'border-box' },
-})
+export const useDarkTheme = () => {
+  const [darkMode, setDarkMode] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return localStorage.getItem('darkMode') === 'on' ? true : false
+    } else {
+      return false
+    }
+  })
 
-export default theme
+  const theme = createTheme({
+    palette: {
+      mode: darkMode ? 'dark' : 'light',
+    },
+  })
+
+  const handleDarkModeOn = () => {
+    localStorage.setItem('darkMode', 'on')
+    setDarkMode(true)
+    console.log(theme)
+  }
+
+  const handleDarkModeOff = () => {
+    localStorage.setItem('darkMode', 'off')
+    setDarkMode(false)
+    console.log(theme)
+  }
+
+  useEffect(() => {
+    if (localStorage.getItem('darkMode') === 'on') {
+      setDarkMode(true)
+    } else if (localStorage.getItem('darkMode') === 'off') {
+      setDarkMode(false)
+    } else {
+      setDarkMode(false)
+    }
+  }, [])
+
+  return {
+    darkMode,
+    theme,
+    handleDarkModeOff,
+    handleDarkModeOn,
+  }
+}
