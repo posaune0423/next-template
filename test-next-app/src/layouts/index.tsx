@@ -10,7 +10,7 @@ type Props = {
 }
 
 export const Layout: FunctionComponent<Props> = ({ children, component }) => {
-  const { theme, toggleDarkMode } = useDarkTheme()
+  const { theme, darkMode, toggleDarkMode } = useDarkTheme()
   return (
     <ThemeProvider theme={theme}>
       <Head>
@@ -19,7 +19,7 @@ export const Layout: FunctionComponent<Props> = ({ children, component }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {component}
-      <Header handler={toggleDarkMode} />
+      <Header handler={toggleDarkMode} mode={darkMode} />
       {children}
       <Footer />
     </ThemeProvider>
