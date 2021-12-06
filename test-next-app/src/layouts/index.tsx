@@ -2,7 +2,7 @@ import { FunctionComponent } from 'react'
 import { Footer } from '../components/footer'
 import { Header } from '../components/header'
 import { ThemeProvider } from '@mui/material'
-import { useDarkTheme } from 'theme'
+import { useDarkTheme } from 'hooks/theme'
 import Head from 'next/head'
 
 type Props = {
