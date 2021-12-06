@@ -1,8 +1,10 @@
+import { useDarkTheme } from 'hooks/theme'
 import { FunctionComponent } from 'react'
 import { useStyles } from './home.style'
 
 export const Home: FunctionComponent = () => {
-  const classes = useStyles()
+  const { theme } = useDarkTheme()
+  const classes = useStyles(theme)
   return (
     <div className={classes.container}>
       <main className={classes.main}>

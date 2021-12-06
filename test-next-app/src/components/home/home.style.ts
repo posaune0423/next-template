@@ -1,7 +1,12 @@
-import { makeStyles, DefaultTheme } from '@mui/styles'
+import { Theme } from '@mui/material'
+import { makeStyles } from '@mui/styles'
 
-export const useStyles = makeStyles((theme: DefaultTheme) => ({
-  container: { padding: '0 2rem' },
+export const useStyles = makeStyles((theme: Theme) => ({
+  container: {
+    padding: '0 2rem',
+    color: theme.palette.mode === 'dark' ? '#efefef' : 'inherit',
+    backgroundColor: theme.palette.mode === 'dark' ? '#0A1929' : 'inherit',
+  },
   main: {
     minHeight: '100vh',
     padding: '4rem 0',
@@ -17,7 +22,7 @@ export const useStyles = makeStyles((theme: DefaultTheme) => ({
     fontSize: '4rem',
     textAlign: 'center',
     '& a': {
-      color: '#0070f3',
+      color: theme.palette.mode === 'dark' ? '#fa7a18' : '#0070f3',
       textDecoration: 'none',
       '&:hover': { textDecoration: 'underline' },
       '&:focus': { textDecoration: 'underline' },
@@ -31,7 +36,7 @@ export const useStyles = makeStyles((theme: DefaultTheme) => ({
     textAlign: 'center',
   },
   code: {
-    background: '#fafafa',
+    background: theme.palette.mode === 'dark' ? '#050505' : '#fafafa',
     borderRadius: '5px',
     padding: '0.75rem',
     fontSize: '1.1rem',
