@@ -1,4 +1,4 @@
-import { useDarkTheme } from 'hooks/theme'
+import { useDarkTheme } from '../../hooks/theme'
 import { FunctionComponent } from 'react'
 import { useStyles } from './home.style'
 
