@@ -1,4 +1,4 @@
-import { FunctionComponent } from 'react';
+import { BaseSyntheticEvent, FunctionComponent } from 'react';
 import {
   Avatar,
   Button,
@@ -16,7 +16,7 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import { FieldValues, UseFormRegister } from 'react-hook-form';
 
 type HookFormProps = {
-  onSubmit: (data: any) => Promise<void>;
+  onSubmit: (e?: BaseSyntheticEvent<object, any, any>) => Promise<void>;
   register: UseFormRegister<FieldValues>;
   errors: { [x: string]: any };
 };

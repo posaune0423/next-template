@@ -1,6 +1,6 @@
 import { FunctionComponent } from 'react';
 import { HookForm as HookFormComponent } from './hook-form';
-import { useForm } from 'react-hook-form';
+import { FieldValues, useForm } from 'react-hook-form';
 
 export const HookForm: FunctionComponent = () => {
   const {
@@ -11,7 +11,7 @@ export const HookForm: FunctionComponent = () => {
     mode: 'onSubmit'
   });
 
-  const onSubmit = handleSubmit((data: any) => console.log(data));
+  const onSubmit = handleSubmit((data: FieldValues) => console.log(data));
 
   return (
     <HookFormComponent
