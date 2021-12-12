@@ -1,4 +1,4 @@
-import { FunctionComponent, FormEvent } from 'react';
+import { FunctionComponent } from 'react';
 import { HookForm as HookFormComponent } from './hook-form';
 import { useForm } from 'react-hook-form';
 
@@ -8,22 +8,15 @@ export const HookForm: FunctionComponent = () => {
     handleSubmit,
     formState: { errors }
   } = useForm({
-    mode: 'all'
+    mode: 'onSubmit'
   });
-  const onSubmit = (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    // eslint-disable-next-line no-console
-    console.log({
-      email: data.get('email'),
-      password: data.get('password')
-    });
-  };
+
+  const onSubmit = handleSubmit((data: any) => console.log(data));
+
   return (
     <HookFormComponent
       onSubmit={onSubmit}
       register={register}
-      handleSubmit={handleSubmit}
       errors={errors}
     />
   );

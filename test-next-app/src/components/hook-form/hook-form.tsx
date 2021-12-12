@@ -1,5 +1,4 @@
-import { FunctionComponent, FormEvent } from 'react';
-// import { useForm } from 'react-hook-form'
+import { FunctionComponent } from 'react';
 import {
   Avatar,
   Button,
@@ -14,15 +13,10 @@ import {
   Container
 } from '@mui/material';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
-import {
-  FieldValues,
-  UseFormHandleSubmit,
-  UseFormRegister
-} from 'react-hook-form';
+import { FieldValues, UseFormRegister } from 'react-hook-form';
 
 type HookFormProps = {
-  onSubmit: (event: FormEvent<HTMLFormElement>) => void;
-  handleSubmit: UseFormHandleSubmit<FieldValues>;
+  onSubmit: (data: any) => Promise<void>;
   register: UseFormRegister<FieldValues>;
   errors: { [x: string]: any };
 };
@@ -30,7 +24,6 @@ type HookFormProps = {
 export const HookForm: FunctionComponent<HookFormProps> = ({
   onSubmit,
   register,
-  handleSubmit,
   errors
 }) => {
   return (
