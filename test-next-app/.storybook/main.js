@@ -9,6 +9,7 @@ module.exports = {
     '@storybook/addon-essentials',
     '@storybook/addon-knobs',
     'storybook-addon-material-ui'
+    'storycap',
   ],
   framework: '@storybook/react',
 }
