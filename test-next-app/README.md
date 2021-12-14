@@ -38,3 +38,6 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 gcloud auth application-default login
 gcloud auth activate-service-account --key-file path/to/your_service_account_key.json
 ```
+
+## Github Actions configuration reference
+- https://github.com/reg-viz/reg-suit/blob/master/.circleci/config.yml
