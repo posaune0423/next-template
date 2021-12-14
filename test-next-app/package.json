@@ -7,6 +7,7 @@
     "start": "next start",
     "lint": "next lint",
     "storybook": "start-storybook -p 6006 -s src/styles",
+    "screenshot": "storycap -C puppeteer --serverCmd \"start-storybook -p 6006 -s src/styles\" http://localhost:6006 --serverTimeout 60000",
     "build-storybook": "build-storybook"
   },
   "dependencies": {
@@ -33,8 +34,10 @@
     "babel-loader": "^8.2.3",
     "eslint": "8.4.0",
     "eslint-config-next": "12.0.7",
+    "puppeteer": "^13.0.0",
     "reg-suit": "^0.11.1",
     "storybook-addon-material-ui": "^0.9.0-alpha.24",
+    "storycap": "^3.1.0",
     "typescript": "4.5.2"
   }
 }
