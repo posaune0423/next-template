@@ -64,7 +64,7 @@ export const Header: FunctionComponent<Props> = (props) => {
             </MenuItem>
           </Menu>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Test Next App
+            Test Next App !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
           </Typography>
           {props.mode ? (
             <IconButton color="inherit" onClick={props.handler}>
