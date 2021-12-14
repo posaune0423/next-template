@@ -8,7 +8,7 @@ module.exports = {
     '@storybook/addon-links',
     '@storybook/addon-essentials',
     '@storybook/addon-knobs',
-    'storybook-addon-material-ui'
+    'storybook-addon-material-ui',
     'storycap',
   ],
   framework: '@storybook/react',
