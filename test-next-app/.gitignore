@@ -35,3 +35,10 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
+
+# End of https://www.gitignore.io/api/node
+.DS_Store
+lib/
+__screenshot__
+__screenshots__
+.reg
