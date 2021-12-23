@@ -40,7 +40,7 @@ export const Footer: FunctionComponent = () => {
       >
         <Container maxWidth="sm">
           <Typography variant="body1">
-            My sticky footer can be found here.
+            My sticky footer can be found here !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
           </Typography>
           <Copyright />
         </Container>
