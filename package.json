@@ -6,8 +6,6 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "screenshot": "storycap -C puppeteer --serverCmd \"start-storybook -p 6006 -s src/styles\" http://localhost:6006 --serverTimeout 60000",
-    "vrt": "reg-suit run",
     "test": "jest",
     "test:coverage": "jest --collect-coverage"
   },
@@ -38,11 +36,6 @@
     "jest-image-snapshot": "^4.5.1",
     "jest-puppeteer": "^6.0.3",
     "puppeteer": "^13.0.0",
-    "reg-keygen-git-hash-plugin": "^0.11.1",
-    "reg-notify-github-plugin": "^0.11.1",
-    "reg-publish-gcs-plugin": "^0.11.1",
-    "reg-suit": "^0.11.1",
-    "storycap": "^3.1.0",
     "ts-jest": "^27.1.2",
     "typescript": "4.5.2"
   }
